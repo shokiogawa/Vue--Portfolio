@@ -4,9 +4,6 @@
  </pheader>
 
  <about v-bind:backGround = "backGround"
-        v-bind:back1 = "back1"
-        v-bind:back2 = "back2"
-        v-bind:back3 = "back3"
         v-on:changebackGround="changebackGround"
 >
  </about>
@@ -14,6 +11,7 @@
 <div class="works">
  <div class="container mt-5 text-center">
     <works-data v-bind:programing="programing"
+                v-on:changePrograming="changePrograming"
                 
     >
     </works-data>
@@ -57,9 +55,6 @@ export default {
 
     data: function(){
         return {
-            back1: true,
-            back2: false,
-            back3: false,
             backGround: '大学時代',
             programing: 'All',
             window: false,
@@ -82,39 +77,14 @@ export default {
             this.owork = this.works[num]
             return  this.owork;
         },
+
+        changePrograming: function(programing){
+            this.programing = programing
+        },
         
 
         changebackGround: function(backGround){
             this.backGround = backGround;
-            if (this.back1 && this.backGround == '青年海外協力隊'){
-                this.back1 = !this.back1
-                this.back3 = !this.back3
-            }
-
-            if(this.back1 && this.backGround == '大学院時代'){
-                this.back1 = !this.back1
-                this.back2 = !this.back2
-            }
-
-            if (this.back2 && this.backGround == '青年海外協力隊'){
-                this.back2 = !this.back2
-                this.back3 = !this.back3
-            }
-
-            if(this.back2 && this.backGround == '大学時代'){
-                this.back1 = !this.back1
-                this.back2 = !this.back2
-            }
-
-            if (this.back3 && this.backGround == '大学時代'){
-                this.back1 = !this.back1
-                this.back3 = !this.back3
-            }
-
-            if(this.back3 && this.backGround == '大学院時代'){
-                this.back3 = !this.back3
-                this.back2 = !this.back2
-            }
         }
      },
 

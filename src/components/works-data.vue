@@ -7,24 +7,24 @@
             
             <div class="radio mt-4">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="university" id="type1" value="Rails" v-model="programing">
+                <input class="form-check-input" type="radio" name="Programing" id="type1" value="Rails" v-on:change="$emit('changePrograming', $event.target.value)">
                 <label class="form-check-label" for="type1">Ruby on rails</label>
               </div>
           
               <div class="form-check form-check-inline">
-                 <input class="form-check-input" type="radio" name="Graduate" id="type2" value="WordPress" v-model="programing">
+                 <input class="form-check-input" type="radio" name="Programing" id="type2" value="WordPress" v-on:change="$emit('changePrograming', $event.target.value)">
                  <label class="form-check-label" for="type2">Word Press</label>
               </div>
           
                <div class="form-check form-check-inline">
-                 <input class="form-check-input" type="radio" name="JOCV" id="type3" value="Vue" v-model="programing">
+                 <input class="form-check-input" type="radio" name="Programing" id="type3" value="Vue" v-on:change="$emit('changePrograming', $event.target.value)">
                  <label class="form-check-label" for="type3">Vue.js</label>
                </div>
           
                <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="JOCV" id="type4" value="All" v-model="programing">
+                <input class="form-check-input" type="radio" name="Programing" id="type4" value="All" v-on:change="$emit('changePrograming', $event.target.value)">
                 <label class="form-check-label" for="type4">All</label>
-              </div>
+               </div>
             </div>
   </div>
 </template>

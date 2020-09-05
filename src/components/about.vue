@@ -6,17 +6,17 @@
            </div>
            <div class="radio mt-4">
              <div class="form-check form-check-inline">
-               <input class="form-check-input" type="radio" name="university" id="type1"  v-bind:checked="back1" v-on:change="$emit('changebackGround', '大学時代')">
+               <input class="form-check-input" type="radio" name="backGround" id="type1"  value="大学時代" v-on:change="$emit('changebackGround', $event.target.value)">
                <label class="form-check-label" for="type1">大学時代</label>
              </div>
 
              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="Graduate" id="type2"   v-bind:checked="back2" v-on:change="$emit('changebackGround', '大学院時代')">
+                <input class="form-check-input" type="radio" name="backGround" id="type2"   value="大学院時代" v-on:change="$emit('changebackGround', $event.target.value)">
                 <label class="form-check-label" for="type2">大学院時代</label>
               </div>
 
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="JOCV" id="type3" v-bind:checked="back3" v-on:change="$emit('changebackGround', '青年海外協力隊')">
+                <input class="form-check-input" type="radio" name="backGround" id="type3" value="青年海外協力隊" v-on:change="$emit('changebackGround', $event.target.value)">
                 <label class="form-check-label" for="type3">青年海外協力隊</label>
               </div>
            </div>
