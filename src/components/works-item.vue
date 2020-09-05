@@ -1,16 +1,29 @@
 <template>
     <div class="works_contents">
         <div class=" mt-5">
-            <div class="item" > 
-                <div class="card mt-5"  >
-                    <img v-bind:src="work.image" class="card-img-top" alt="...">
-                    <div class="card-body">
-                       <h5 class="card-title">{{work.name}}</h5>
-                       <p class="card-text">使用言語:{{work.kind}}</p>
-                       <button class="btn btn-primary" v-on:click="$emit('onDetail', work.id)">詳細</button>
-                    </div>
-                </div>
-            </div>
+          <v-card
+                 class="mx-auto"
+                 max-width="400"
+          >
+    <v-img
+      class="white--text align-end"
+      height="200px"
+      v-bind:src="work.image"
+    >
+    </v-img>
+
+    <v-card-subtitle class="pb-0">{{work.kind}}</v-card-subtitle>
+    <v-card-title>{{work.name}}</v-card-title>
+    <v-card-actions>
+      <v-btn
+        class="text-info"
+        text
+        v-on:click="$emit('onDetail', work.id)"
+      >
+        Detail
+      </v-btn>
+    </v-card-actions>
+  </v-card>
         </div>
 
         <div class="detail text-center" v-if="window">
@@ -81,6 +94,10 @@ export default {
     .item .card{
         height:26em;
     }
+
+
+
+
 
 }
 </style>
