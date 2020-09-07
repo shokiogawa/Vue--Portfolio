@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <v-app>
    <introduction  v-bind:works="works"></introduction>
-  </div>
+  </v-app>
 </template>
 
 <script>

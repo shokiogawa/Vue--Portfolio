@@ -78,7 +78,7 @@
 <script>
  export default {
      name :'About',
-     props: ['backGround', 'back1', 'back2', 'back3']
+     props: ['backGround']
  }
 </script>
 

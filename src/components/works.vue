@@ -32,7 +32,6 @@ export default {
      data: function(){
        return{
             window: false,
-            programing: 'All',
             work: ''
        }
      },

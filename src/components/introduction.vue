@@ -56,9 +56,7 @@ export default {
     data: function(){
         return {
             backGround: '大学時代',
-            programing: 'All',
-            window: false,
-            owork: '',
+
         
             
 
