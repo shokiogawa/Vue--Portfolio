@@ -9,7 +9,7 @@
                     v-bind:key="work.id"
                     v-bind:window = "window"
                     v-bind:work = "work"
-                    v-on:programingChange = "programingChange"
+                    
         >
         </works-item>
           

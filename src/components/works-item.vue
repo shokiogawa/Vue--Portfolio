@@ -39,9 +39,13 @@
 </template>
 
 <script>
+
 export default {
     name: 'worksItem',
     props: ['work', 'window', 'owork'],
+    methods: {
+        
+    }
 
 
 }

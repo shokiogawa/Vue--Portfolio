@@ -10,8 +10,7 @@
 
 <div class="works">
  <div class="container mt-5 text-center">
-    <works-data v-bind:programing="programing"
-                v-on:changePrograming="changePrograming"
+    <works-data 
                 
     >
     </works-data>
@@ -23,6 +22,7 @@
                 v-bind:key="work.id"
                 v-bind:owork="owork"
                 v-on:onDetail="onDetail"
+                
     >
     </works-item>
     </div>
@@ -56,14 +56,11 @@ export default {
     data: function(){
         return {
             backGround: '大学時代',
-
-        
-            
-
+            window: false,
+            owork: '',
         }
     },
-
-    methods: {  
+    methods: {
         onDetail: function(id){
             if(!this.window){
                 this.window = true;
@@ -76,14 +73,9 @@ export default {
             return  this.owork;
         },
 
-        changePrograming: function(programing){
-            this.programing = programing
-        },
-        
-
         changebackGround: function(backGround){
-            this.backGround = backGround;
-        }
+            this.backGround = backGround 
+         },
      },
 
      computed: {
@@ -91,17 +83,17 @@ export default {
             var newList = [];
             for (var i=0; i< this.works.length; i++){
                 var isShow = true;
-                if(this.programing == 'Rails' && this.works[i].kind !== 'rails'){
+                if(this.$store.state.programing == 'Rails' && this.works[i].kind !== 'rails'){
                     isShow = false;
                 }
-                if(this.programing == 'WordPress' && this.works[i].kind !== 'wordpress'){
+                if(this.$store.state.programing == 'WordPress' && this.works[i].kind !== 'wordpress'){
                     isShow = false;
                 }
-                if(this.programing == 'Vue' && this.works[i].kind !== 'vue'){
+                if(this.$store.state.programing == 'Vue' && this.works[i].kind !== 'vue'){
                     isShow = false;
                 }
 
-                if(this.programing == 'All'){
+                if(this.$store.state.programing == 'All'){
                     isShow = true;
                 }
                 if(isShow){
